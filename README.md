@@ -52,6 +52,8 @@ After install, these wrappers are available under `~/.codex/workflow/`:
 
 ```bash
 ~/.codex/workflow/cdx
+~/.codex/workflow/cdx-fast
+~/.codex/workflow/cdx-long
 ~/.codex/workflow/cdxa
 ~/.codex/workflow/cdx-ui
 ~/.codex/workflow/cdx-review
@@ -62,6 +64,8 @@ Recommended shell aliases:
 
 ```bash
 alias cdx="$HOME/.codex/workflow/cdx"
+alias cdxfast="$HOME/.codex/workflow/cdx-fast"
+alias cdxlong="$HOME/.codex/workflow/cdx-long"
 alias cdxa="$HOME/.codex/workflow/cdxa"
 alias cdxui="$HOME/.codex/workflow/cdx-ui"
 alias cdxr="$HOME/.codex/workflow/cdx-review"
@@ -75,7 +79,7 @@ See [`docs/terminal-setup.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/termina
 Quick fix:
 
 ```bash
-cdx
+cdxfast
 # make the change
 gitready
 ```
@@ -83,7 +87,7 @@ gitready
 Non-trivial work:
 
 ```bash
-cdx
+cdxlong
 # ask Codex to produce a plan first
 # implement
 gitready
@@ -124,6 +128,10 @@ Per the upstream catalog, curated skills can be installed from inside Codex with
 For browser-heavy debugging, `playwright-interactive` is the right fit because it uses a persistent `js_repl` session for iterative UI debugging and verification. See [`docs/browser-verification.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/browser-verification.md).
 
 For Figma-backed frontend work, use the Figma MCP flow when available and treat the design-to-code loop as bidirectional: design context into code, then running UI back into Figma for comparison and refinement. See [`docs/frontend-workflow.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/frontend-workflow.md).
+
+For profile and wrapper recommendations, see [`docs/config-profiles.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/config-profiles.md).
+For cross-project routing from official Codex use cases, see [`docs/use-cases.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/use-cases.md).
+For richer IDE context and MCP-backed loops, see [`docs/ide-mcp.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/ide-mcp.md).
 
 ## Uninstall
 

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+exec codex --search -m gpt-5.4-mini -c 'model_reasoning_effort="xhigh"' "$@"

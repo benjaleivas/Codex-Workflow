@@ -53,6 +53,8 @@ echo "Install complete."
 echo
 echo "Suggested aliases:"
 echo "  alias cdx=\"\$HOME/.codex/workflow/cdx\""
+echo "  alias cdxfast=\"\$HOME/.codex/workflow/cdx-fast\""
+echo "  alias cdxlong=\"\$HOME/.codex/workflow/cdx-long\""
 echo "  alias cdxa=\"\$HOME/.codex/workflow/cdxa\""
 echo "  alias cdxui=\"\$HOME/.codex/workflow/cdx-ui\""
 echo "  alias cdxr=\"\$HOME/.codex/workflow/cdx-review\""

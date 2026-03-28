@@ -91,6 +91,7 @@ In particular:
 
 - use `playwright-interactive` for persistent browser-based QA, UI debugging, and screenshot-backed verification
 - use Figma tooling when the task is explicitly design-led or requires code-to-canvas iteration
+- use richer IDE or MCP context when available because compile, test, and inspection feedback reduces verification blind spots
 
 Use the minimal set that covers the task.
 
@@ -121,6 +122,14 @@ For large or long-running tasks:
 - keep a small set of durable files as the project memory instead of relying on chat history
 - use skills as reusable procedures and keep their descriptions precise enough to route correctly
 - when building repeatable workflows, prefer artifacts and stable handoff files over ad hoc narration
+
+## Tooling Context
+
+When an IDE MCP or similarly rich tool context is available:
+
+- prefer it over blind code inspection for compile and test feedback
+- use it to catch API misuse, type issues, and invalid assumptions earlier
+- treat editor diagnostics and test feedback as part of the verification loop, not as optional extras
 
 ## Non-Goals
 
