@@ -11,6 +11,8 @@ It defines a stronger workflow baseline for Codex sessions across repositories w
 - Verify after meaningful edits.
 - Review likely regressions before shipping.
 - Keep the workflow Codex-native. Do not assume Claude slash commands, hooks, or settings.
+- For UI work, bias toward explicit design direction and visual verification instead of generic implementation.
+- For long tasks, preserve continuity through durable files, milestone checks, and resumable state.
 
 ## Default Session Posture
 
@@ -53,6 +55,8 @@ After edits:
 - otherwise run the narrowest check that meaningfully validates the change
 - inspect the diff for unintended edits
 - state what you could not verify
+- if the work is UI-heavy, prefer real browser verification and screenshots over code-only confidence
+- if the work is long-running, verify at milestones rather than waiting until the end
 
 Never claim something is done if the relevant verification was skipped.
 
@@ -86,6 +90,7 @@ If the environment has curated upstream skills from `openai/skills`, use them wh
 In particular:
 
 - use `playwright-interactive` for persistent browser-based QA, UI debugging, and screenshot-backed verification
+- use Figma tooling when the task is explicitly design-led or requires code-to-canvas iteration
 
 Use the minimal set that covers the task.
 
@@ -96,6 +101,26 @@ Use the minimal set that covers the task.
 - Do not push unless asked.
 - Keep commit messages intentional and scoped.
 - Do not rewrite user work unless explicitly requested.
+
+## Frontend Direction
+
+For frontend tasks:
+
+- start with design principles, not just component lists
+- ask for or infer a design brief with visual references, mood, hierarchy, and constraints
+- prefer designs with narrative structure and real content over placeholder-heavy layouts
+- tell Codex to adhere to the repo's design system instead of inventing a parallel one
+- use screenshots, browser verification, and iteration loops when signoff depends on visuals
+
+## Long-Horizon Execution
+
+For large or long-running tasks:
+
+- break work into milestones with explicit verification at each milestone
+- persist the active plan, assumptions, and progress in repo-visible artifacts when useful
+- keep a small set of durable files as the project memory instead of relying on chat history
+- use skills as reusable procedures and keep their descriptions precise enough to route correctly
+- when building repeatable workflows, prefer artifacts and stable handoff files over ad hoc narration
 
 ## Non-Goals
 

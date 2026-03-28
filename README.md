@@ -17,6 +17,7 @@ It is built around the surfaces Codex actually supports today:
 3. Shell wrappers for a faster terminal workflow.
 4. Install and uninstall scripts that preserve your current `~/.codex` state.
 5. A documented path for persistent browser QA using the curated `playwright-interactive` skill.
+6. Opinionated patterns distilled from recent OpenAI Codex workflow posts.
 
 ## Philosophy
 
@@ -99,9 +100,14 @@ cdxui
 ## Included Skills
 
 - `plan-and-spec`
+- `frontend-delight`
+- `long-horizon-execution`
 - `review-and-ship`
+- `skill-evals`
 
 These are custom workflow overlays that complement the curated skills already installed in `~/.codex/skills/`.
+
+See [`docs/openai-patterns.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/openai-patterns.md) for the source-to-workflow mapping.
 
 ## Upstream Skills
 
@@ -115,6 +121,8 @@ Two especially relevant references:
 Per the upstream catalog, curated skills can be installed from inside Codex with `$skill-installer`, then picked up after restarting Codex. This workflow repo does not vendor those curated skills; it documents how to use them where they materially improve the workflow.
 
 For browser-heavy debugging, `playwright-interactive` is the right fit because it uses a persistent `js_repl` session for iterative UI debugging and verification. See [`docs/browser-verification.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/browser-verification.md).
+
+For Figma-backed frontend work, use the Figma MCP flow when available and treat the design-to-code loop as bidirectional: design context into code, then running UI back into Figma for comparison and refinement. See [`docs/frontend-workflow.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/frontend-workflow.md).
 
 ## Uninstall
 
