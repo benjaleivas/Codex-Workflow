@@ -108,6 +108,7 @@ cdxui
 These are custom workflow overlays that complement the curated skills already installed in `~/.codex/skills/`.
 
 See [`docs/openai-patterns.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/openai-patterns.md) for the source-to-workflow mapping.
+See [`docs/repo-examples.md`](/Users/bleiva/Desktop/Codex-Workflow/docs/repo-examples.md) for example repo-local `AGENTS.md` files.
 
 ## Upstream Skills
 
