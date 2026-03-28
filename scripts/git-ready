@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+if [[ -z "${REPO_ROOT}" ]]; then
+  echo "Not inside a git repository."
+  exit 1
+fi
+
+cd "${REPO_ROOT}"
+
+echo "=== Git Ready ==="
+echo
+echo "--- Remote ---"
+git remote -v || true
+echo
+echo "--- Status ---"
+git status --short || true
+echo
+echo "--- Diff summary ---"
+git diff --stat || true
+echo
+echo "--- Suggested next steps ---"
+echo "1. Run repo verification."
+echo "2. Review the diff."
+echo "3. Stage focused files."
+echo "4. Ask Codex for a commit message if needed."
